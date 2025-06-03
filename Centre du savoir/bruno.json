@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Centre du savoir ",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

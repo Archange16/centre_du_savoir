@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
     }, []);
 
     return (
-        <html lang="en">
+        <html lang="fr" className="no-js">
             <head>
                 <link rel='icon' type='image/png' href='../favicon.ico' />
             </head>

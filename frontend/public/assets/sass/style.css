@@ -481,7 +481,7 @@ p {
   position: relative;
   top: 0px;
   margin-left: 10px;
-  font-size: 15px;
+  font-size: 20px;
   transition: 0.2s;
 }
 .btn-one:hover,
@@ -1060,11 +1060,11 @@ p {
   --btn-white: #FFFFFF;
   --border-white: #FFFFFF;
   --black: #000000;
-  --primary-color-1: #0E59F2;
+  --primary-color-1: #f39200;
   --primary-color-2: #F8E559;
-  --primary-color-3: #406AFF;
-  --bg-heading-color: #051634;
-  --text-heading-color: #051634;
+  --primary-color-3: #f39200;
+  --bg-heading-color: #0f70b7;
+  --text-heading-color: #0f70b7;
   --btn-heading-color: #131313;
   --body-color: #343434;
   --dark-one: #1C1E22;
@@ -3354,6 +3354,8 @@ p {
 .header__area-menubar-center-menu ul li.menu-item-has-children > a {
   display: flex;
   align-items: end;
+  font-size: 20px;
+  font-weight: 600;
 }
 .header__area-menubar-center-menu ul li.menu-item-has-children > a i {
   font-size: 14px;
@@ -5706,12 +5708,12 @@ Responsive Menu Css
   /* padding: 40px 30px 40px 30px; */
   border-radius: 8px;
   box-shadow: 0px 6px 60px 0px rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
+  border-radius: 5px;
   transition: 0.4s;
   border-bottom: 4px solid var(--primary-color-1);
 }
 .services__five-single-service img{
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
 }
 .services__five-single-service-icon {
   width: 100px;
@@ -5731,12 +5733,13 @@ Responsive Menu Css
   transition: 0.4s;
 }
 .services__five-single-service-content{
-  padding: 40px 30px 40px 30px; 
+  padding: 0px 30px 40px 30px; 
 }
 .services__five-single-service-content h4 {
-  font-size: 22px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
   transition: 0.4s;
+  text-align: center;
 }
 .services__five-single-service-content p {
   color: var(--color-2);
@@ -5746,26 +5749,26 @@ Responsive Menu Css
 }
 .services__five-single-service:hover {
   transform: translateY(-5px);
-  background: var(--primary-color-1);
+  /* background: var(--primary-color-1); */
 }
 .services__five-single-service:hover .services__five-single-service-icon {
   background-color: rgba(255, 255, 255, 0.1019607843);
 }
-.services__five-single-service:hover .services__five-single-service-icon i {
-  color: var(--text-white);
+/* .services__five-single-service:hover .services__five-single-service-icon i {
+  color: var(--body-color);
 }
 .services__five-single-service:hover .services__five-single-service-content h4 {
-  color: var(--text-white);
+  color: var(--color-6);
 }
 .services__five-single-service:hover .services__five-single-service-content p {
-  color: var(--text-white);
+  color: var(--color-6);
 }
 .services__five-single-service:hover .services__five-single-service-content a {
   color: var(--text-white);
 }
 .services__five-single-service:hover .services__five-single-service-content a i {
   color: var(--text-white);
-}
+} */
 
 /*==========================================================================
 * Service Details CSS
@@ -9173,8 +9176,10 @@ Responsive Menu Css
   color: var(--primary-color-1);
 }
 .blog__details-comment-form {
+  /* display: flex;
+  justify-content: space-between; */
   margin-top: 55px;
-  padding: 55px 58px;
+  padding: 30px 30px;
   background-color: var(--color-1);
   border-radius: 5px;
 }
@@ -10916,3 +10921,21 @@ Responsive Menu Css
   background-color: var(--color-1);
   height: 100vh;
 }/*# sourceMappingURL=style.css.map */
+
+/*==========================================================================
+* classLigne
+============================================================================*/
+.classLigne{
+  background-color: var(--primary-color-1);
+  width: 50%;
+  color: var(--text-white);
+  position: relative;
+  top: -20px;
+  border-radius: 0px 20px 20px 0px;
+  padding: 10px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+

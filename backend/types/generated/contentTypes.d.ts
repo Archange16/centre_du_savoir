@@ -373,6 +373,56 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFormationFormation extends Struct.CollectionTypeSchema {
+  collectionName: 'formations';
+  info: {
+    displayName: 'formation';
+    pluralName: 'formations';
+    singularName: 'formation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    acces_plateforme: Schema.Attribute.Boolean;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date_creation: Schema.Attribute.DateTime;
+    date_mise_a_jour: Schema.Attribute.DateTime;
+    description_courte: Schema.Attribute.String;
+    description_longue: Schema.Attribute.Text;
+    domaine: Schema.Attribute.String;
+    double_certification: Schema.Attribute.Boolean;
+    duree_heures: Schema.Attribute.Integer;
+    est_actif: Schema.Attribute.Boolean;
+    image_principale_url: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    langue: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::formation.formation'
+    > &
+      Schema.Attribute.Private;
+    niveau: Schema.Attribute.String;
+    objectifs: Schema.Attribute.JSON;
+    plaguette: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    prerequis: Schema.Attribute.JSON;
+    prix: Schema.Attribute.Decimal;
+    prix_promotionnel: Schema.Attribute.Decimal;
+    profils_concernes: Schema.Attribute.JSON;
+    public_cible: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String;
+    titre: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -882,6 +932,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::formation.formation': ApiFormationFormation;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

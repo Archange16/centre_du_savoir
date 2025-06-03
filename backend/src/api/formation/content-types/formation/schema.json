@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formations",
+  "info": {
+    "singularName": "formation",
+    "pluralName": "formations",
+    "displayName": "formation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "description_courte": {
+      "type": "string"
+    },
+    "description_longue": {
+      "type": "text"
+    },
+    "niveau": {
+      "type": "string"
+    },
+    "duree_heures": {
+      "type": "integer"
+    },
+    "prix": {
+      "type": "decimal"
+    },
+    "prix_promotionnel": {
+      "type": "decimal"
+    },
+    "langue": {
+      "type": "string"
+    },
+    "est_actif": {
+      "type": "boolean"
+    },
+    "date_creation": {
+      "type": "datetime"
+    },
+    "date_mise_a_jour": {
+      "type": "datetime"
+    },
+    "image_principale_url": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "public_cible": {
+      "type": "string"
+    },
+    "domaine": {
+      "type": "string"
+    },
+    "profils_concernes": {
+      "type": "json"
+    },
+    "acces_plateforme": {
+      "type": "boolean"
+    },
+    "double_certification": {
+      "type": "boolean"
+    },
+    "objectifs": {
+      "type": "json"
+    },
+    "prerequis": {
+      "type": "json"
+    },
+    "plaguette": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
